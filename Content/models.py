@@ -28,6 +28,20 @@ class Blog(models.Model):
         default=True,
         help_text=_('Will this post be published?')
     )
+    create_time = models.DateTimeField(
+        verbose_name=_('Create Time'),
+        auto_now_add=True,
+        null=False,
+        blank=False,
+        editable=False
+    )
+    last_update_time = models.DateTimeField(
+        verbose_name=_('Last Update Time'),
+        auto_now=True,
+        null=False,
+        blank=False,
+        editable=False
+    )
     content = RichTextUploadingField()
 
     class Meta:
