@@ -1,3 +1,14 @@
 from django.shortcuts import render
+from django.views import View
 
-# Create your views here.
+from . import models
+
+
+class IndexView(View):
+    template_name = 'index.html'
+
+    def get(self, request, *args, **kwargs):
+        context = {
+            'blogs': models.Blog.objects.all()
+        }
+        return render(request, self.template_name, context)
