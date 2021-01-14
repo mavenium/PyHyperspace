@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views import View
+from django.views import View, generic
 
 from . import models
 
@@ -13,3 +13,10 @@ class IndexView(View):
         }
         return render(request, self.template_name, context)
 
+
+class BlogSingle(generic.DetailView):
+    model = models.Blog
+    template_name = 'blog_single.html'
+
+    def get_queryset(self):
+        return self.model.objects.filter(slug=self.kwargs['slug'])
