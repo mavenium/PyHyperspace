@@ -52,14 +52,16 @@
 		{% for blog in blogs %}
 		<section>
 			<a href="{% url 'Content:blog_single' blog.slug %}" class="image">
-				<img src="{{ blog.thumbnail.url }}" alt="" data-position="center center"/>
+				<img src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}" data-position="center center"/>
 			</a>
 			<div class="content">
 				<div class="inner">
 					<h2>{{ blog.title }}</h2>
 					{{ blog.content | safe | truncatewords_html:30 }}
 					<ul class="actions">
-						<li><a href="{% url 'Content:blog_single' blog.slug %}" class="button">Learn more</a></li>
+						<li>
+							<a href="{% url 'Content:blog_single' blog.slug %}" title="{{ blog.title }}" class="button">Learn more</a>
+						</li>
 					</ul>
 				</div>
 			</div>
