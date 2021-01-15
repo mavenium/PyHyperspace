@@ -50,3 +50,31 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Skill(models.Model):
+    title = models.CharField(
+        max_length=256,
+        verbose_name=_('Title :'),
+        unique=True,
+        null=False,
+        blank=False
+    )
+    description = models.TextField(
+        verbose_name=_('Description :'),
+        null=False,
+        blank=False
+    )
+    icon = models.CharField(
+        max_length=30,
+        verbose_name=_('Icon name :'),
+        null=False,
+        blank=False
+    )
+
+    class Meta:
+        verbose_name = _('Skill')
+        verbose_name_plural = _('Skills')
+
+    def __str__(self):
+        return self.title
