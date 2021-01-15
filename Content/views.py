@@ -10,7 +10,7 @@ class IndexView(View):
     def get(self, request, *args, **kwargs):
         context = {
             'blogs': models.Blog.objects.all()[:4],
-            'skills': models.Skill.objecta.all()[:6]
+            'skills': models.Skill.objects.all()[:6]
         }
         return render(request, self.template_name, context)
 
