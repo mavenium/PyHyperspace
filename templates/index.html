@@ -155,11 +155,13 @@
 									</a>
 								</li>
 								{% endif %}
+								{% if config.SOCIAL_NETWORKS_GITHUB_URL != '#' %}
 								<li>
-									<a href="#" class="icon brands fa-github">
+									<a href="{{ config.SOCIAL_NETWORKS_GITHUB_URL }}" class="icon brands fa-github">
 										<span class="label">GitHub</span>
 									</a>
 								</li>
+								{% endif %}
 								<li>
 									<a href="#" class="icon brands fa-instagram">
 										<span class="label">Instagram</span>
