@@ -162,11 +162,13 @@
 									</a>
 								</li>
 								{% endif %}
+								{% if config.SOCIAL_NETWORKS_INSTAGRAM_URL != '#' %}
 								<li>
-									<a href="#" class="icon brands fa-instagram">
+									<a href="{{ config.SOCIAL_NETWORKS_INSTAGRAM_URL }}" class="icon brands fa-instagram">
 										<span class="label">Instagram</span>
 									</a>
 								</li>
+								{% endif %}
 								<li>
 									<a href="#" class="icon brands fa-linkedin-in">
 										<span class="label">LinkedIn</span>
