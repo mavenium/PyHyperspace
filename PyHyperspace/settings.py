@@ -190,6 +190,7 @@ CONSTANCE_CONFIG = {
     'SOCIAL_NETWORKS_TELEGRAM_URL': ('#', _('Social Networks - Telegram'), str),
     'SOCIAL_NETWORKS_GITHUB_URL': ('#', _('Social Networks - Github'), str),
     'SOCIAL_NETWORKS_GITLAB_URL': ('#', _('Social Networks - Gitlab'), str),
+    'SOCIAL_NETWORKS_LINKEDIN_URL': ('#', _('Social Networks - LinkedIn'), str),
 }
 
 CONSTANCE_CONFIG_FIELDSETS = {

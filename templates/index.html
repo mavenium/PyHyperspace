@@ -169,11 +169,13 @@
 									</a>
 								</li>
 								{% endif %}
+								{% if config.SOCIAL_NETWORKS_LINKEDIN_URL != '#' %}
 								<li>
-									<a href="#" class="icon brands fa-linkedin-in">
+									<a href="{{ config.SOCIAL_NETWORKS_LINKEDIN_URL }}" class="icon brands fa-linkedin-in">
 										<span class="label">LinkedIn</span>
 									</a>
 								</li>
+								{% endif %}
 							</ul>
 						</li>
 					</ul>
