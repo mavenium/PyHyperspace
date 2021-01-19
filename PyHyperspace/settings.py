@@ -187,6 +187,10 @@ CONSTANCE_CONFIG = {
     'SOCIAL_NETWORKS_INSTAGRAM_URL': ('#', _('Social Networks - Instagram'), str),
     'SOCIAL_NETWORKS_GITHUB_URL': ('#', _('Social Networks - Github'), str),
     'SOCIAL_NETWORKS_LINKEDIN_URL': ('#', _('Social Networks - LinkedIn'), str),
+
+    'SKILLS_TITLE': ('Get in touch', _('"Get in touch" title'), str),
+    'SKILLS_DESCRIPTION': ('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', _('"Get in touch" description text'), str),
+
 }
 
 CONSTANCE_CONFIG_FIELDSETS = {
@@ -201,6 +205,10 @@ CONSTANCE_CONFIG_FIELDSETS = {
         'GET_IN_TOUCH_EMAIL_ADDRESS',
         'GET_IN_TOUCH_PHONE',
         'GET_IN_TOUCH_ADDRESS',
+    ),
+    '"Skills" Options': (
+        'SKILLS_TITLE',
+        'SKILLS_DESCRIPTION',
     ),
     '"Social Networks" Options': (
         'SOCIAL_NETWORKS_FACEBOOK_URL',
