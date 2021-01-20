@@ -193,7 +193,6 @@ CONSTANCE_CONFIG = {
 
     'INTRO_TITLE': ('Hyperspace', _('"Intro" title'), str),
     'INTRO_DESCRIPTION': ('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', _('"Intro" description text'), str),
-    'INTRO_LINK': ('#', _('"Intro" link'), str),
 }
 
 CONSTANCE_CONFIG_FIELDSETS = {
@@ -216,7 +215,6 @@ CONSTANCE_CONFIG_FIELDSETS = {
     '"Intro" Options': (
         'INTRO_TITLE',
         'INTRO_DESCRIPTION',
-        'INTRO_LINK',
     ),
     '"Social Networks" Options': (
         'SOCIAL_NETWORKS_FACEBOOK_URL',
