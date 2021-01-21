@@ -62,7 +62,7 @@
 					{{ blog.content | safe | truncatewords_html:30 }}
 					<ul class="actions">
 						<li>
-							<a href="{% url 'Content:blog_single' blog.slug %}" title="{{ blog.title }}" class="button">Learn more</a>
+							<a href="{% url 'Content:blog_single' blog.slug %}" title="{{ blog.title }}" class="button">{% translate 'Learn more' %}</a>
 						</li>
 					</ul>
 				</div>
