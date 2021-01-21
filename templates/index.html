@@ -121,52 +121,52 @@
 				<section>
 					<ul class="contact">
 						<li>
-							<h3>Address</h3>
+							<h3>{% translate 'Address' %}</h3>
 							<span>{{ config.GET_IN_TOUCH_ADDRESS | safe }}</span>
 						</li>
 						<li>
-							<h3>Email</h3>
+							<h3>{% translate 'Email' %}</h3>
 							<a href="mailto:{{ config.GET_IN_TOUCH_EMAIL_ADDRESS }}">{{ config.GET_IN_TOUCH_EMAIL_ADDRESS }}</a>
 						</li>
 						<li>
-							<h3>Phone</h3>
+							<h3>{% translate 'Phone' %}</h3>
 							<span>{{ config.GET_IN_TOUCH_PHONE }}</span>
 						</li>
 						<li>
-							<h3>Social</h3>
+							<h3>{% translate 'Social' %}</h3>
 							<ul class="icons">
 								{% if config.SOCIAL_NETWORKS_TWITTER_URL != '#' %}
 								<li>
 									<a href="{{ config.SOCIAL_NETWORKS_TWITTER_URL }}" class="icon brands fa-twitter">
-										<span class="label">Twitter</span>
+										<span class="label">{% translate 'Twitter' %}</span>
 									</a>
 								</li>
 								{% endif %}
 								{% if config.SOCIAL_NETWORKS_FACEBOOK_URL != '#' %}
 								<li>
 									<a href="{{ config.SOCIAL_NETWORKS_FACEBOOK_URL }}" class="icon brands fa-facebook-f">
-										<span class="label">Facebook</span>
+										<span class="label">{% translate 'Facebook' %}</span>
 									</a>
 								</li>
 								{% endif %}
 								{% if config.SOCIAL_NETWORKS_GITHUB_URL != '#' %}
 								<li>
 									<a href="{{ config.SOCIAL_NETWORKS_GITHUB_URL }}" class="icon brands fa-github">
-										<span class="label">GitHub</span>
+										<span class="label">{% translate 'GitHub' %}</span>
 									</a>
 								</li>
 								{% endif %}
 								{% if config.SOCIAL_NETWORKS_INSTAGRAM_URL != '#' %}
 								<li>
 									<a href="{{ config.SOCIAL_NETWORKS_INSTAGRAM_URL }}" class="icon brands fa-instagram">
-										<span class="label">Instagram</span>
+										<span class="label">{% translate 'Instagram' %}</span>
 									</a>
 								</li>
 								{% endif %}
 								{% if config.SOCIAL_NETWORKS_LINKEDIN_URL != '#' %}
 								<li>
 									<a href="{{ config.SOCIAL_NETWORKS_LINKEDIN_URL }}" class="icon brands fa-linkedin-in">
-										<span class="label">LinkedIn</span>
+										<span class="label">{% translate 'LinkedIn' %}</span>
 									</a>
 								</li>
 								{% endif %}
