@@ -43,7 +43,9 @@
 			<h1>{{ config.INTRO_TITLE }}</h1>
 			<p>{{ config.INTRO_DESCRIPTION | safe }}</p>
 			<ul class="actions">
-				<li><a href="#one" class="button scrolly">{% translate 'Learn more' %}</a></li>
+				<li>
+					<a href="#one" class="button scrolly">{% translate 'Learn more' %}</a>
+				</li>
 			</ul>
 		</div>
 	</section>
@@ -62,7 +64,9 @@
 					{{ blog.content | safe | truncatewords_html:30 }}
 					<ul class="actions">
 						<li>
-							<a href="{% url 'Content:blog_single' blog.slug %}" title="{{ blog.title }}" class="button">{% translate 'Learn more' %}</a>
+							<a href="{% url 'Content:blog_single' blog.slug %}" title="{{ blog.title }}" class="button">
+								{% translate 'Learn more' %}
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -86,7 +90,9 @@
 				{% endfor %}
 			</div>
 			<ul class="actions">
-				<li><a href="{{ config.GET_IN_TOUCH_LINK }}" class="button">{% translate 'Learn more' %}</a></li>
+				<li>
+					<a href="{{ config.GET_IN_TOUCH_LINK }}" class="button">{% translate 'Learn more' %}</a>
+				</li>
 			</ul>
 		</div>
 	</section>
@@ -126,7 +132,9 @@
 						</li>
 						<li>
 							<h3>{% translate 'Email' %}</h3>
-							<a href="mailto:{{ config.GET_IN_TOUCH_EMAIL_ADDRESS }}">{{ config.GET_IN_TOUCH_EMAIL_ADDRESS }}</a>
+							<a href="mailto:{{ config.GET_IN_TOUCH_EMAIL_ADDRESS }}">
+								{{ config.GET_IN_TOUCH_EMAIL_ADDRESS }}
+							</a>
 						</li>
 						<li>
 							<h3>{% translate 'Phone' %}</h3>
