@@ -181,6 +181,7 @@ CONSTANCE_CONFIG = {
     'GET_IN_TOUCH_EMAIL_ADDRESS': ('information@untitled.tld', _('"Get in touch" email address'), str),
     'GET_IN_TOUCH_PHONE': ('(000) 000-0000', _('"Get in touch" phone number'), str),
     'GET_IN_TOUCH_ADDRESS': ('1234 Somewhere Road #8254<br />Nashville, TN 00000-0000', _('"Get in touch" address'), str),
+    'GET_IN_TOUCH_LINK': ('Learn more link', _('"Get in touch" link'), str),
 
     'SOCIAL_NETWORKS_FACEBOOK_URL': ('#', _('Social Networks - Facebook'), str),
     'SOCIAL_NETWORKS_TWITTER_URL': ('#', _('Social Networks - Twitter'), str),
@@ -207,6 +208,7 @@ CONSTANCE_CONFIG_FIELDSETS = {
         'GET_IN_TOUCH_EMAIL_ADDRESS',
         'GET_IN_TOUCH_PHONE',
         'GET_IN_TOUCH_ADDRESS',
+        'GET_IN_TOUCH_LINK',
     ),
     '"Skills" Options': (
         'SKILLS_TITLE',
