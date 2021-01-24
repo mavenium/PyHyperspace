@@ -26,5 +26,23 @@ class BlogAdmin(admin.ModelAdmin):
     }
 
 
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = [
+        'name',
+        'email',
+        'message',
+        'create_time'
+    ]
+    list_filter = (
+        'create_time',
+    )
+    search_fields = (
+        'name',
+        'email',
+        'message',
+    )
+
+
 admin.site.register(models.Blog, BlogAdmin)
 admin.site.register(models.Skill)
+admin.site.register(models.ContactUs, ContactUsAdmin)
