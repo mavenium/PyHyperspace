@@ -78,3 +78,36 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ContactUs(models.Model):
+    name = models.CharField(
+        max_length=256,
+        verbose_name=_('Name'),
+        null=False,
+        blank=False
+    )
+    email = models.EmailField(
+        verbose_name=_('Email'),
+        null=False,
+        blank=False
+    )
+    message = models.TextField(
+        verbose_name=_('Message'),
+        null=False,
+        blank=False
+    )
+    create_time = models.DateTimeField(
+        verbose_name=_('Create Time'),
+        auto_now_add=True,
+        null=False,
+        blank=False,
+        editable=False
+    )
+
+    class Meta:
+        verbose_name = _('Contact Us')
+        verbose_name_plural = _('Contact Us')
+
+    def __str__(self):
+        return str(self.pk)
