@@ -27,6 +27,9 @@ class BlogAdmin(admin.ModelAdmin):
 
 
 class ContactUsAdmin(admin.ModelAdmin):
+    def has_add_permission(self, request):
+        return False
+
     list_display = [
         'name',
         'email',
