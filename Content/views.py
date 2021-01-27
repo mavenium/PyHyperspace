@@ -21,3 +21,7 @@ class BlogSingle(generic.DetailView):
 
     def get_queryset(self):
         return self.model.objects.filter(slug=self.kwargs['slug'])
+
+
+def create_contact(request):
+    pass
