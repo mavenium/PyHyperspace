@@ -104,7 +104,7 @@
 			<p>{{ config.GET_IN_TOUCH_DESCRIPTION | safe }}</p>
 			<div class="split style1">
 				<section>
-					<form method="post" action="#">
+					<form method="post" id="contact_us_form">
 						{% csrf_token %}
 						<div class="fields">
 							<div class="field half">
@@ -208,6 +208,41 @@
 <script src="{% static 'js/breakpoints.min.js' %}"></script>
 <script src="{% static 'js/util.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // Add Contact Us
+        $("#contact_us_form").submit(function (event) {
+            event.preventDefault();
+
+            $.ajax({
+                type: 'post',
+                url: "{% url 'Content:create_contact' %}",
+                headers: {
+                    "X-CSRFToken": $(this).find('input[name="csrfmiddlewaretoken"]').val(),
+                },
+                data: {
+                    'name': $(this).find('input[name="name"]').val(),
+                    'email': $(this).find('input[name="email"]').val(),
+                    'message': $(this).find('textarea[name="message"]').val(),
+                },
+                success: function (data) {
+                    if (data['success']) {
+                        alert(data['success']);
+                    } else if (data['error']) {
+                        alert(data['error']);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+        // Add Contact Us
+
+    });
+</script>
 
 </body>
 </html>
