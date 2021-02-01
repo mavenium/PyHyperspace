@@ -42,3 +42,6 @@ python manage.py collectstatic		                        # Create statics files
 python manage.py runserver		                        # Run the project
 ```
 3. Go to  `http://127.0.0.1:8000/` to use project
+------------
+### Notes
+The Hyperspace template is released under "Creative Commons Attribution 3.0 Unported" license.
