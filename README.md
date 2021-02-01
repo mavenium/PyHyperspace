@@ -8,6 +8,7 @@ A free, open-source Blog CMS based on the "Django" and "Hyperspace" HTML5 theme.
 
 - "Blog" section to create and edit a blog
 - "Skill" section to create and edit a skill
+- "ContactUs" section
 - "CONSTANCE" Section to manage dynamic Django settings (Blog title, Social Networks links and ...)
 - Used "Django Admin" to manage all models
 - Used "Hyperspace" theme by HTML5 UP
